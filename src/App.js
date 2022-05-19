@@ -6,6 +6,7 @@ import Addemp from './Components/Addemp';
 import Search from './Components/Search';
 import Header from './Components/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import View from './Components/View';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Addemp/>}/>
         <Route path="/search" exact element={<Search/>}/>
-        <Route path="/" exact element/>
+        <Route path="/view" exact element={<View/>}/>
         </Routes></BrowserRouter>
     
 
