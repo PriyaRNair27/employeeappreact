@@ -9,10 +9,15 @@ const Addemp = () => {
     var [cname,setcname]=useState("")
     var [dob,setdob]=useState("")
     var [em,setem]=useState("")
+    const [value, setvalue] = useState("")
     const subdata=()=>{
         const data={"id":id,"name":name,"des":des,"sal":sal,"cname":cname,"dob":dob,"em":em}
         console.log(data)
     }
+        const resetInputField = () => {
+            setvalue(a.target.value)
+        }
+    
   return (
     <div>
 <Header/>
@@ -49,7 +54,7 @@ const Addemp = () => {
                    <input  onChange={(a)=>{setem(a.target.value)}} type="email" name="" id="" className="form-control"/>
                 </div>
                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <button  onClick={subdata}className="btn btn-success">CLEAR</button>
+                    <button  onClick={resetInputField}className="btn btn-success">CLEAR</button>
                 </div>
                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <button onClick={subdata} className="btn btn-danger">REGISTER</button>
